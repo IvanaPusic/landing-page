@@ -1,10 +1,37 @@
-import { Container } from 'react-bootstrap';
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from 'react-router-dom';
+import { RootLayout } from './layouts';
+import {
+  Certifications,
+  Contacts,
+  Error,
+  Events,
+  Grants,
+  Home,
+  News,
+} from './pages';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path='/' element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path='certifications' element={<Certifications />} />
+        <Route path='grants' element={<Grants />} />
+        <Route path='events' element={<Events />} />
+        <Route path='news' element={<News />} />
+        <Route path='contact' element={<Contacts />} />
+      </Route>
+      <Route path='/*' element={<Error />} />
+    </>
+  )
+);
 function App() {
-  return (
-    <Container className=' min-vh-100 d-flex justify-content-center align-items-center '>
-      <h1 className='text-xl'> Near Balkans</h1>
-    </Container>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
