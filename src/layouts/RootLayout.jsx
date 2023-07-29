@@ -1,13 +1,5 @@
 import { Header } from '../components';
-import {
-  Certifications,
-  Contacts,
-  Error,
-  Events,
-  Grants,
-  Home,
-  News,
-} from '../pages';
+import { Certifications, Contacts, Events, Home, News } from '../pages';
 
 const RootLayout = () => {
   return (
@@ -15,11 +7,11 @@ const RootLayout = () => {
       <Header />
       <Home />
       <Certifications />
-      <Grants />
+
       <Events />
       <News />
       <Contacts />
-      <Error />
+      {/* <Error /> */}
     </div>
   );
 };

@@ -1,11 +1,11 @@
 const Events = () => {
   return (
-    <div
+    <section
       className='min-vh-100 d-flex justify-content-center align-items-center'
       id='events'
     >
       Events
-    </div>
+    </section>
   );
 };
 

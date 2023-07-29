@@ -5,15 +5,7 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom';
 import { RootLayout } from './layouts';
-import {
-  Certifications,
-  Contacts,
-  Error,
-  Events,
-  Grants,
-  Home,
-  News,
-} from './pages';
+import { Certifications, Contacts, Events, Home, News } from './pages';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,12 +13,12 @@ const router = createBrowserRouter(
       <Route path='/' element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path='certifications' element={<Certifications />} />
-        <Route path='grants' element={<Grants />} />
+        <Route path='grants' element={<Certifications />} />
         <Route path='events' element={<Events />} />
         <Route path='news' element={<News />} />
         <Route path='contact' element={<Contacts />} />
       </Route>
-      <Route path='/*' element={<Error />} />
+      {/* <Route path='/#*' element={<Error />} /> */}
     </>
   )
 );
