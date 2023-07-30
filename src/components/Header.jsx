@@ -14,7 +14,7 @@ const Header = () => {
       {isNavOpen && <MobileMenu />}
       <header id='header'>
         <nav className='navbar navbar-expand-lg fixed-top bg-white bg-opacity-75'>
-          <div className='navigation container-fluid'>
+          <div className='navigation container-fluid d-lg-flex justify-lg-content-center align-items-lg-center gap-5'>
             <div className='navbar-brand'>
               <img src={logo} alt='logo' />
             </div>
@@ -31,7 +31,7 @@ const Header = () => {
                 return (
                   <li className='link-container' key={link.id}>
                     <HashLink
-                      className='text-decoration-none text-light-gray'
+                      className='text-decoration-none text-light-gray nav-link'
                       smooth
                       to={link.link}
                     >

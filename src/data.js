@@ -11,7 +11,7 @@ const links = [
   },
   {
     id: 3,
-    link: '/#grants',
+    link: '/#certifications',
     linkName: 'Grants',
   },
   {
