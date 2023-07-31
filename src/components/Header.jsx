@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      {isNavOpen && <MobileMenu />}
+      {isNavOpen && <MobileMenu setIsNavOpen={setIsNavOpen} />}
       <header id='header'>
         <nav className='navbar navbar-expand-lg fixed-top bg-white bg-opacity-75'>
           <div className='navigation container-fluid d-lg-flex justify-lg-content-center align-items-lg-center gap-5'>

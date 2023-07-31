@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <>
-      <section
+      <main
         id='home'
         className='home d-flex justify-content-lg-start align-items-lg-start'
       >
@@ -27,7 +27,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-      </section>
+      </main>
 
       <section className='hub'>
         <video id='background-video' autoPlay loop muted>

@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { HashLink } from 'react-router-hash-link';
 import links from '../data';
 
@@ -25,4 +26,7 @@ const MobileMenu = ({ setIsNavOpen }) => {
   );
 };
 
+MobileMenu.propTypes = {
+  setIsNavOpen: PropTypes.func,
+};
 export default MobileMenu;

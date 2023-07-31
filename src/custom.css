@@ -21,15 +21,15 @@
   /* font-weight */
   --fw-500: 500;
   --fw-600: 600;
-
-  /* transitions */
-  --to-right: all 350ms ease;
+  /* transition */
+  --to-right: all 250ms ease;
 }
 
 body {
   min-height: 100vh;
   font-family: var(--ff-manrope);
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .carbon-btn,
@@ -50,15 +50,22 @@ body {
   color: var(--clr-accent);
 }
 
-/* ------------------------- NAVIGATION ----------------------------------------------- */
+/* ------------------------- HOVER EFFECTS ----------------------------------------------- */
 
-.nav-link {
+.nav-link,
+.card-btn {
   transition: var(--to-right);
 }
 
+.card-btn:hover,
 .nav-link:hover {
   transform: translateX(3px);
+}
+.nav-link:hover {
   color: var(--clr-accent);
+}
+.card-btn:hover {
+  color: white;
 }
 /* ------------------------- HOME SECTION ----------------------------------------------- */
 
@@ -99,6 +106,10 @@ body {
   font-size: var(--fs-normal);
 }
 
+.carbon-btn {
+  width: 17.8125rem;
+}
+
 .carbon-btn,
 .carbon-link {
   transition: var(--to-right);
@@ -117,7 +128,6 @@ body {
   height: 26.25rem;
   overflow: hidden;
   z-index: 1;
-  background: linear-gradient(180deg, #fff 0%, #f0f6ff 100%);
 }
 
 .hub video {
@@ -128,6 +138,8 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  background: linear-gradient(180deg, #fff 0%, #f0f6ff 100%);
+  mix-blend-mode: multiply;
 }
 
 .hub-content {
@@ -148,8 +160,8 @@ body {
   font-weight: var(--fw-500);
   line-height: 150%;
 }
-.hub h3,
-.hub p {
+.hub .title,
+.hub .info {
   z-index: 10;
 }
 
@@ -194,7 +206,7 @@ body {
   padding-top: 1.5rem;
 }
 
-.education-card p {
+.education-card .info {
   opacity: 0.8;
   margin-top: 1rem;
 }
@@ -202,6 +214,7 @@ body {
 .education-card .img-container {
   margin-bottom: 2rem;
 }
+
 .education-card .title {
   margin-bottom: 2.5rem;
 }
@@ -209,7 +222,7 @@ body {
 /* ------------------------- EVENTS SECTION ----------------------------------------------- */
 
 .events {
-  padding-top: 8rem;
+  margin-top: 6.12rem;
 }
 .events-content,
 .events-calendar {
@@ -219,10 +232,12 @@ body {
 .events-content .title {
   font-size: var(--fs-3-xl);
 }
+
 .events-content .info {
   font-size: var(--fs-xs);
   opacity: 0.8;
 }
+
 .events-calendar {
   width: 100vw;
 }
@@ -242,6 +257,7 @@ body {
   left: 2rem;
   background-color: var(--clr-dark);
 }
+
 .not-found .title {
   font-size: var(--fs-2-xl);
   font-weight: var(--fw-600);
@@ -259,7 +275,6 @@ body {
 
 @media (min-width: 62em) {
   /* Navigation */
-
   .navbar {
     height: 6rem;
   }
@@ -271,6 +286,7 @@ body {
   .home-content {
     margin-left: 8rem;
   }
+
   .nav-list {
     margin-right: 23rem;
     display: flex;
@@ -313,6 +329,7 @@ body {
 }
 
 @media (min-width: 75em) {
+  /* Navigation */
   .navbar {
     height: 8rem;
   }
@@ -320,13 +337,15 @@ body {
   .nav-list {
     gap: 2.5rem;
   }
-  /* Home */
 
   .education,
   .events-content,
   .events-calendar {
     padding-inline: 8rem;
   }
+
+  /* Home */
+
   .home {
     height: 53.0625rem;
     display: flex;
@@ -364,6 +383,7 @@ body {
     font-size: var(--fs-xl);
   }
 
+  /* Hub */
   .hub-content .title {
     font-size: var(--fs-4-xl);
   }
@@ -373,6 +393,7 @@ body {
     font-size: var(--fs-normal);
   }
 
+  /* Goals */
   .goals {
     padding-inline: 8rem;
   }
@@ -384,6 +405,7 @@ body {
     font-size: var(--fs-normal);
   }
 
+  /* Events */
   .events-content .title {
     font-size: var(--fs-4-xl);
   }
