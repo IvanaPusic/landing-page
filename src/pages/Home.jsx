@@ -12,7 +12,7 @@ const Home = () => {
             learning about, using or building on the NEAR protocol in the Balkan
             countries.
           </h2>
-          <div className=' d-flex flex-column w-100 carbon'>
+          <div className='carbon d-flex flex-column w-100 '>
             <p className='d-flex  align-items-center gap-1 '>
               <span className='d-inline-block carbon-icon'> 🌱</span>
               <a
