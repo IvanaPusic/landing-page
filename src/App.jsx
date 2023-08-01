@@ -1,7 +1,7 @@
 import {
   Route,
   RouterProvider,
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
 import { RootLayout } from './layouts';
@@ -15,7 +15,7 @@ import {
   News,
 } from './pages';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <>
       <Route path='/' element={<RootLayout />}>
