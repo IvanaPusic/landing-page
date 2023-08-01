@@ -11,7 +11,6 @@ const RootLayout = () => {
       <Events />
       <News />
       <Contacts />
-      {/* <Error /> */}
     </div>
   );
 };
